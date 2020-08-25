@@ -1,0 +1,26 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:DFPRIMOS
+Option Name:
+Communication SW:0
+Capacity:142
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+\ClrText
+"\(-)FACTORIZACAO PRIMA\(-)"
+"Introduza o Numero"?\->A
+2\->B
+\Do
+\While \Frac (A/B)=0
+B\DispA/B\->A
+\WhileEnd
+\If B=2
+\Then 3\->B
+\Else B+2\->B
+\IfEnd
+\LpWhile B\<=A
+"PRIMA [EXE] PARA SAIR"\@00
+%End

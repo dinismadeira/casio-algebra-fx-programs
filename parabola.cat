@@ -1,0 +1,54 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:PARABOLA
+Option Name:
+Communication SW:0
+Capacity:425
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+\ClrText
+"Y=AX\x^2+BX+C       [0]":\GotoA:\Lbl B
+"A"?\->A
+\Locate 1,7,"                     "
+"B"?\->B
+"C"?\->C
+B/A\->M
+\ClrText
+"A(X\x^2+MX)+C       [1]"
+"A="
+"M="
+"C="
+\Locate 3,2,A
+\Locate 3,3,M
+\Locate 3,4,C\DispM/2\->H
+\ClrText
+-(H\x^2)*A\->O
+\ClrText
+"A(X\x^2+MX+H\x^2)+C+O  [2]"
+"A="
+"M="
+"H="
+"C="
+"O="
+\Locate 3,2,A
+\Locate 3,3,M
+\Locate 3,4,H
+\Locate 3,5,C
+\Locate 3,6,O\Disp\GotoC:\Lbl A:\Locate 1,7,"DINIS 05-05-2004 V2.0":\GotoB:\Lbl C:C+O\->K
+\ClrText
+"A(X+H)\x^2+K        [3]"
+"A="
+"H="
+"K="
+\Locate 3,2,A
+\Locate 3,3,H
+\Locate 3,4,K
+"VERTICE:"
+"X="
+"Y="
+\Locate 3,6,-H
+\Locate 3,7,K\@00
+%End

@@ -1,0 +1,50 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:FORMRESL
+Option Name:
+Communication SW:0
+Capacity:401
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+\ClrText
+"FORMULA RESOLVENTE"
+"\RaX\x^2+\RbX+\Rc=0"
+\Locate 1,7,"DINIS 05-05-2004 V1.3"
+"\Ra"?\->A
+\Locate 1,7,"                     "
+"\Rb"?\->B
+"\Rc"?\->C
+-B\->D
+2A\->E
+B\x^2\->F
+-4AC\->G
+F+G\->H
+B
+H<0\=>\Goto1
+(D-\sqrtH)\ab/cE\->I
+(D+\sqrtH)\ab/cE\->J
+\If I\<>(\Int I)
+\Then 
+\If J\<>(\Int J)
+\Then 
+\ClrText
+"X=\Ra-\sqrt\Rb    X=\Ra+\sqrt\Rb  [1]  ---- OU   ----        \Rc         \Rc"
+"\Ra="
+"\Rb="
+"\Rc="
+\Locate 3,4,D
+\Locate 3,5,H
+\Locate 3,6,E\Disp\IfEnd
+\IfEnd
+\ClrText
+"X=                [2]OU"
+"X="
+\Locate 3,1,I
+\Locate 3,3,J
+\Stop
+\Lbl 1
+"EQUACAO IMPOSSIVEL!"\@00
+%End

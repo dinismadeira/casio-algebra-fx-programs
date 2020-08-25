@@ -1,0 +1,36 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:SEMANA
+Option Name:
+Communication SW:0
+Capacity:438
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+"==== DIA SEMANA ===="
+\Do
+"DIA"?\->D
+\LpWhile D<1\ Or D>31
+\Do
+"MES"?\->M
+\LpWhile M<1\ Or M>12
+\Do
+"ANO(AAAA)"?\->A
+\LpWhile \Abs A\<>A
+
+M\<=2\=>(365A+D+31(M-1)+\Int ((A-1)/4)-\Int (0.75(\Int (((A-1)/100)+1)))\->F
+M>2\=>(365A+D+31(M-1)-\Int (0.4M+2.3)+\Int (A/4)-\Int (0.75(\Int (A/100)+1)))\->F
+(F+(\Int (-F/7)*7))\->X
+"=====================     ESSE DIA E"
+X=0\=>"     SABADO"
+X=1\=>"     DOMINGO"
+X=2\=>"     SEGUNDA"
+X=3\=>"     TERCA"
+X=4\=>"     QUARTA"
+X=5\=>"     QUINTA"
+X=6\=>"     SEXTA"
+"====================="
+\Stop\@00
+%End

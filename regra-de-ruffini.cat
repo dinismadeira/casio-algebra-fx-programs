@@ -1,0 +1,80 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:RUFFINI
+Option Name:
+Communication SW:0
+Capacity:470
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+0\->\r
+\Lbl A
+\ClrText
+"AX^4+BX^3+CX\x^2+DX+E / ZX+\theta                 --------------------"
+\Isz \r
+\r=2\=>\Goto2
+\r=3\=>\Goto3
+\r=4\=>\Goto4
+\r=5\=>\Goto5
+\r=6\=>\Goto6
+\r=7\=>\Goto7
+
+\Locate 1,7,"DINIS 12-05-2004 V4.0"
+"A(X^4)"?\->A
+\Locate 1,7,"                     "
+\GotoA
+
+
+\Lbl 2
+"B(X^3)"?\->B
+\GotoA
+
+\Lbl 3
+"C(X\x^2)"?\->C
+\GotoA
+
+\Lbl 4
+"D(X)"?\->D
+\GotoA
+
+\Lbl 5
+"E"?\->E
+\GotoA
+
+\Lbl 6
+"\theta"?\->X
+\GotoA
+
+\Lbl 7
+"Z"?\->Z
+
+
+
+(-X\ab/cZ)\->\theta
+A\theta\->L
+L+B\->M
+\thetaM\->N
+N+C\->O
+\thetaO\->P
+D+P\->Q
+Q\theta\->R
+R+E\->S
+(A\ab/cZ)\->T
+M\ab/cZ\->U
+O\ab/cZ\->V
+Q\ab/cZ\->W
+\ClrText
+"AX^3+BX\x^2+CX+D"
+"A="
+"B="
+"C="
+"D="
+"RESTO:"
+\Locate 4,2,T
+\Locate 4,3,U
+\Locate 4,4,V
+\Locate 4,5,W
+\Locate 4,7,S\@00
+%End

@@ -1,0 +1,81 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:TIMER
+Option Name:
+Communication SW:0
+Capacity:540
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+\ViewWindow 1,127,0,1,63,0
+\Cls
+
+\Horizontal 57
+\Horizontal 8
+\F-Line 21,1,21,7
+\F-Line 104,1,104,7
+\F-Line 41,1,41,7
+\F-Line 63,1,63,7
+\Text 58,1,"INIC"
+\Text 58,24,"STOP"
+\Text 58,43,"REIN"
+\Text 58,106,"SAIR"
+
+
+
+\Text 1,52,"0"
+\Text 1,60,"00"
+\Text 1,72,"00"
+\Text 1,56,":"
+\Text 1,68,":"
+
+
+0\->A~Z
+
+
+
+
+\Lbl 2
+\Getkey\->G
+G=79\=>\Goto1
+G=29\=>\GotoF
+G=59\=>0\->A~Z
+\Goto2
+
+
+\Lbl 1
+\Getkey\->G
+G=29\=>\GotoF
+G=69\=>\Goto2
+G=59\=>0\->A~Z
+
+S+0.2899\->S
+S\>=60\=>\Isz M
+S\>=60\=>0\->S
+M\>=60\=>\Isz H
+M\>=60\=>0\->M
+
+H\>=10\=>0\->H
+M\>=10\=>60\->A
+S\>=10\=>72\->B
+M<10\=>64\->A
+M<10\=>\Text 1,60,"0"
+S<10\=>76\->B
+S<10\=>\Text 1,72,"0"
+
+\Text 1,52,\Int H
+\Text 1,A,\Int M
+\Text 1,B,\Int S
+\Goto1
+
+\Lbl F
+"        TIMER"
+""
+"     VERSAO 2.0"
+""
+"    DINIS MADEIRA"
+""
+"     16\(-)08\(-)2004"\@00
+%End

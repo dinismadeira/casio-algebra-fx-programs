@@ -1,0 +1,469 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:NIBBLES
+Option Name:
+Communication SW:0
+Capacity:5648
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+\ViewWindow 1,127,0,1,63,0
+
+
+\Cls
+0\->A~Z
+1\->N
+\Text 58,2,"DINIS 19-05-2004     NIVEL 01"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 126,34,114,34
+\F-Line 114,34,114,21
+\F-Line 114,21,15,21
+\F-Line 114,48,101,48
+\F-Line 101,48,101,34
+\F-Line 101,34,3,34
+\F-Line 88,48,15,48
+\F-Line 15,48,15,62
+N\x^-1\->N
+\GotoM
+
+
+
+
+
+\Lbl 2
+\Cls
+\Text 58,2,"DINIS 19-05-2004     NIVEL 02"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 126,21,15,21
+\F-Line 15,21,15,37
+\F-Line 114,34,28,34
+\F-Line 28,34,28,50
+\F-Line 28,50,2,50
+\F-Line 41,50,127,50
+\GotoM
+
+
+
+
+\Lbl 3
+\Cls
+\Text 58,2,"DINIS 19-05-2004     NIVEL 03"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 114,9,114,50
+\F-Line 101,50,101,62
+\F-Line 101,21,101,37
+\F-Line 101,37,88,37
+\F-Line 88,50,88,21
+\F-Line 88,21,15,21
+\F-Line 15,21,15,36
+\F-Line 15,36,23,36
+\F-Line 23,36,23,21
+\F-Line 75,34,75,62
+\F-Line 62,21,62,48
+\F-Line 49,49,49,62
+\F-Line 62,36,36,36
+\F-Line 36,36,36,50
+\F-Line 36,50,3,50
+\GotoM
+
+
+
+\Lbl 4
+\Cls
+\Text 58,2,"DINIS 19-05-2004     NIVEL 04"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 114,9,114,24
+\F-Line 114,24,103,24
+\F-Line 103,24,103,9
+\F-Line 103,37,103,50
+\F-Line 103,50,114,50
+\F-Line 114,50,114,37
+\F-Line 114,37,89,37
+\F-Line 89,37,89,24
+\F-Line 89,24,15,24
+\F-Line 15,24,15,37
+\F-Line 76,62,76,37
+\F-Line 76,37,61,37
+\F-Line 76,50,90,50
+\F-Line 63,50,3,50
+\F-Line 28,50,28,37
+\F-Line 28,37,35,37
+\F-Line 48,50,48,24
+\GotoM
+
+
+
+\Lbl 5
+\Cls
+\Text 58,2,"DINIS 19-05-2004     NIVEL 05"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 116,9,116,19
+\F-Line 116,30,116,41
+\F-Line 116,41,73,41
+\F-Line 73,41,73,62
+\F-Line 116,52,116,62
+\F-Line 105,41,105,52
+\F-Line 84,52,94,52
+\F-Line 94,52,94,62
+\F-Line 94,41,94,30
+\F-Line 105,30,105,19
+\F-Line 105,19,83,19
+\F-Line 83,19,83,30
+\F-Line 83,30,62,30
+\F-Line 62,30,62,52
+\F-Line 62,52,24,52
+\F-Line 24,52,24,9
+\F-Line 13,19,13,62
+\F-Line 40,52,40,30
+\F-Line 32,41,32,19
+\F-Line 32,19,73,19
+\F-Line 51,19,51,41
+\GotoM
+
+
+\Lbl 6
+\Cls
+\Text 58,2,"DINIS 27-05-2004     NIVEL 06"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 105,9,105,19
+\F-Line 84,9,84,19
+\F-Line 95,19,95,30
+\F-Line 116,19,116,41
+\F-Line 116,30,51,30
+\F-Line 73,30,73,19
+\F-Line 62,41,62,52
+\F-Line 116,52,105,52
+\F-Line 105,52,105,41
+\F-Line 105,41,62,41
+\F-Line 84,41,84,52
+\F-Line 95,52,95,62
+\F-Line 73,52,73,62
+\F-Line 29,30,29,52
+\F-Line 3,50,7,50
+\F-Line 62,52,40,52
+\F-Line 40,52,40,19
+\F-Line 18,41,18,62
+\F-Line 18,41,29,41
+\F-Line 18,30,18,19
+\F-Line 7,50,7,9
+\F-Line 7,30,18,30
+\F-Line 51,19,18,19
+\F-Line 51,19,51,41
+\F-Line 62,19,62,9
+\GotoM
+
+
+\Lbl 7
+\Cls
+\Text 58,2,"DINIS 02-06-2004     NIVEL 07"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 118,9,118,22
+\F-Line 126,31,109,31
+\F-Line 109,31,109,17
+\F-Line 100,9,100,31
+\F-Line 100,31,91,31
+\F-Line 91,31,91,17
+\F-Line 82,17,82,9
+\F-Line 73,17,73,26
+\F-Line 109,49,109,62
+\F-Line 91,49,91,62
+\F-Line 100,54,100,40
+\F-Line 118,54,118,40
+\F-Line 118,40,82,40
+\F-Line 73,35,73,62
+\F-Line 82,26,64,26
+\F-Line 64,26,64,54
+\F-Line 64,54,46,54
+\F-Line 46,54,46,45
+\F-Line 46,45,37,45
+\F-Line 37,45,37,17
+\F-Line 37,17,28,17
+\F-Line 28,36,37,36
+\F-Line 37,27,46,27
+\F-Line 64,9,64,17
+\F-Line 64,17,46,17
+\F-Line 55,17,55,45
+\F-Line 55,36,46,36
+\F-Line 37,62,37,54
+\F-Line 20,54,20,62
+\F-Line 28,54,28,45
+\F-Line 28,45,20,45
+\F-Line 20,45,20,9
+\F-Line 20,27,28,27
+\F-Line 11,62,11,17
+\F-Line 82,26,82,54
+\GotoM
+
+
+\Lbl 8
+\Cls
+\Text 58,2,"DINIS 06-08-2004     NIVEL 08"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 118,9,118,18
+\F-Line 118,27,126,27
+\F-Line 109,45,126,45
+\F-Line 118,54,100,54
+\F-Line 100,54,100,27
+\F-Line 100,36,118,36
+\F-Line 109,17,109,27
+\F-Line 109,27,83,27
+\F-Line 100,9,100,18
+\F-Line 92,27,92,17
+\F-Line 92,36,92,62
+\F-Line 92,54,65,54
+\F-Line 74,26,74,54
+\F-Line 83,45,83,17
+\F-Line 83,17,65,17
+\F-Line 65,17,65,45
+\F-Line 65,45,47,45
+\F-Line 56,54,56,45
+\F-Line 56,36,56,9
+\F-Line 47,62,47,40
+\F-Line 47,40,38,40
+\F-Line 47,17,47,31
+\F-Line 47,31,29,31
+\F-Line 29,31,29,17
+\F-Line 38,9,38,22
+\F-Line 38,31,38,54
+\F-Line 38,54,29,54
+\F-Line 29,54,29,40
+\F-Line 29,40,20,40
+\F-Line 20,40,20,35
+\F-Line 20,35,11,35
+\F-Line 11,35,11,54
+\F-Line 20,49,20,62
+\F-Line 29,26,11,26
+\F-Line 11,26,11,17
+\F-Line 20,17,20,9
+\GotoM
+
+
+\Lbl 9
+\Cls
+\Text 58,2,"DINIS 07-08-2004     NIVEL 09"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 91,62,91,53
+\F-Line 64,62,64,54
+\F-Line 47,62,47,54
+\F-Line 29,62,29,54
+\F-Line 29,54,20,54
+\F-Line 20,54,20,44
+\F-Line 20,44,11,44
+\F-Line 38,54,38,45
+\F-Line 11,54,11,35
+\F-Line 11,35,29,35
+\F-Line 29,35,29,45
+\F-Line 29,45,47,45
+\F-Line 47,45,47,35
+\F-Line 47,35,55,35
+\F-Line 109,54,100,54
+\F-Line 100,54,100,44
+\F-Line 100,44,82,44
+\F-Line 82,44,82,54
+\F-Line 82,54,73,54
+\F-Line 73,54,73,35
+\F-Line 73,45,55,45
+\F-Line 55,54,55,26
+\F-Line 20,35,20,26
+\F-Line 118,54,118,35
+\F-Line 118,35,109,35
+\F-Line 109,35,109,45
+\F-Line 109,35,82,35
+\F-Line 82,35,82,26
+\F-Line 82,26,64,26
+\F-Line 126,26,100,26
+\F-Line 109,26,109,17
+\F-Line 91,35,91,17
+\F-Line 91,17,82,17
+\F-Line 118,17,118,9
+\F-Line 100,17,100,9
+\F-Line 73,17,73,9
+\F-Line 64,36,64,17
+\F-Line 64,17,47,17
+\F-Line 47,17,47,26
+\F-Line 47,26,29,26
+\F-Line 38,36,38,26
+\F-Line 38,17,38,9
+\F-Line 29,17,11,17
+\F-Line 11,17,11,26
+\F-Line 11,26,3,26
+\F-Line 29,17,29,26
+\GotoM
+
+\Lbl 0
+\Cls
+\Text 58,2,"DINIS 08-08-2004     NIVEL 10"
+\F-Line 2,63,127,63
+\F-Line 127,63,127,8
+\F-Line 127,8,2,8
+\F-Line 2,8,2,50
+\F-Line 29,62,29,50
+\F-Line 29,50,36,50
+\F-Line 36,56,50,56
+\F-Line 43,56,43,36
+\F-Line 43,36,50,36
+\F-Line 50,36,50,15
+\F-Line 57,62,57,50
+\F-Line 57,50,50,50
+\F-Line 50,50,50,43
+\F-Line 8,62,8,50
+\F-Line 8,50,15,50
+\F-Line 15,50,15,43
+\F-Line 15,43,43,43
+\F-Line 15,56,22,56
+\F-Line 22,56,22,15
+\F-Line 22,15,9,15
+\F-Line 3,22,15,22
+\F-Line 15,22,15,29
+\F-Line 8,43,8,29
+\F-Line 8,36,22,36
+\F-Line 22,29,29,29
+\F-Line 71,62,71,50
+\F-Line 71,50,78,50
+\F-Line 78,57,106,57
+\F-Line 106,57,106,50
+\F-Line 64,56,64,43
+\F-Line 29,9,29,15
+\F-Line 43,9,43,22
+\F-Line 57,9,57,15
+\F-Line 78,22,85,22
+\F-Line 99,9,99,22
+\F-Line 57,29,57,43
+\F-Line 57,43,85,43
+\F-Line 85,36,85,50
+\F-Line 85,50,99,50
+\F-Line 99,50,99,43
+\F-Line 99,43,120,43
+\F-Line 120,43,120,22
+\F-Line 120,22,113,22
+\F-Line 29,36,36,36
+\F-Line 36,36,36,15
+\F-Line 29,22,36,22
+\F-Line 36,29,50,29
+\F-Line 50,22,64,22
+\F-Line 64,22,64,15
+\F-Line 64,15,78,15
+\F-Line 71,15,71,29
+\F-Line 64,36,64,29
+\F-Line 64,29,99,29
+\F-Line 99,29,99,36
+\F-Line 71,43,71,36
+\F-Line 78,29,78,36
+\F-Line 92,43,92,15
+\F-Line 120,9,120,15
+\F-Line 120,15,106,15
+\F-Line 106,15,106,36
+\F-Line 106,29,113,29
+\F-Line 113,29,113,36
+\F-Line 113,43,113,57
+\F-Line 113,57,120,57
+\F-Line 120,50,126,50
+\F-Line 78,50,78,57
+\F-Line 85,22,85,9
+
+\GotoM
+
+
+\Lbl Y
+"     \(-)GAME OVER\(-)"
+\Locate 1,7,"    (VERSAO 1.00)"
+\Stop
+
+
+\Lbl Z
+\Cls
+\Horizontal \Ymax
+\Horizontal \Ymin
+\Vertical \Xmax
+\Vertical \Xmin
+\Text 5,27,"PARABENS GANHASTE"
+\Text 11,50,"NIBBLES"
+\F-Line 25,61,103,61
+\F-Line 25,47,103,47
+\F-Line 25,61,25,47
+\F-Line 103,61,103,47
+\Text 29,20,"PARA CALCULADORAS CASIO"
+\F-Line 18,37,112,37
+\F-Line 18,29,112,29
+\F-Line 18,37,18,29
+\F-Line 112,37,112,29
+\Text 41,44,"CRIADO POR:"
+\Text 47,34,"DINIS MADEIRA"
+\F-Line 32,25,94,25
+\F-Line 32,11,94,11
+\F-Line 32,25,32,11
+\F-Line 94,25,94,11
+\Text 56,19,"19-05-2004 A 06-08-2004"
+
+
+\Lbl X
+W\<=58\=>\PxlOn 61-W,5
+W\<=58\=>\PxlOn 61-W,123
+W+0.5\->W
+W+0.5\->W
+W=61\=>"VERSAO 1.00"
+W=61\=>\Stop
+\GotoX
+
+
+
+\Lbl M
+54\->A:125\->B:1\->Z:28\->G
+\While Z=1
+B<3\=>2\->Z
+\PxlTest(55,125
+\Ans=1\=>\GotoN
+\PxlTest(A,B
+\Ans=1\=>\GotoY
+\PxlOn A,B
+\Getkey
+\Ans\<>0\=>\Ans\->G
+G=28\=>\Dsz A
+G=37\=>\Isz A
+G=38\=>\Dsz B
+G=27\=>\Isz B
+\WhileEnd
+
+\Lbl N
+N+1\->N
+N=2\=>\Goto2
+N=3\=>\Goto3
+N=4\=>\Goto4
+N=5\=>\Goto5
+N=6\=>\Goto6
+N=7\=>\Goto7
+N=8\=>\Goto8
+N=9\=>\Goto9
+N=10\=>\Goto0
+N=11\=>\GotoZ
+\@00
+%End

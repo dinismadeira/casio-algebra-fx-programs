@@ -1,0 +1,533 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:FORM3000
+Option Name:
+Communication SW:0
+Capacity:5254
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+\ClrText
+"======FORM3000======"
+" 1.AREAS E VOLUMES"
+" 2.CONVERSOES"
+\Locate 1,7," 6.  \asterCREDITOS\aster"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52)\ Or (\Ans=73)\ Or (\Ans=63)\ Or (\Ans=53))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"===AREAS E VOLUMES=== 1.FIGURAS"
+" 2.SOLIDOS"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52)\ Or (\Ans=73)\ Or (\Ans=63))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"=======FIGURAS======= 1.CIRCULO"
+" 2.TRIANGULO"
+" 3.RECTANGULO"
+" 4.POLIGONO REGULAR"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52)\ Or (\Ans=73)\ Or (\Ans=63))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"=======CIRCULO=======[A=\Pi\r\x^2]"
+"[2\Pi\Cor]"
+"RAIO"?\->R
+\PiR\x^2\->A
+2\PiR\->P
+\ClrText
+"AREA:"
+" "
+"PERIMETRO:"
+" "
+\Locate 6,2,A
+\Locate 6,4,P
+\Stop
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\ClrText
+"======TRIANGULO======[A=(\Rb*H)/2]"
+"BASE"?\->B
+"ALTURA"?\->H
+BH/2\->A
+B+H+\sqrt(B\x^2+H\x^2)\->P
+\ClrText
+"AREA:"
+" "
+"PERIMETRO:"
+" "
+\Locate 6,2,A
+\Locate 6,4,P
+\Stop
+\IfEnd
+\If \Ans=52
+\Then 3\->X
+\ClrText
+"======RECTANGULO=====[A=\Rb*H]"
+"BASE"?\->B
+"ALTURA"?\->H
+BH\->A
+2(B+H)\->P
+\ClrText
+"AREA:"
+" "
+"PERIMETRO:"
+" "
+\Locate 6,2,A
+\Locate 6,4,P
+\Stop
+\IfEnd
+\If \Ans=73
+\Then 4\->X
+\ClrText
+"==POLIGONO REGULAR===[A=(P*\RaP)/2]"
+"LADO"?\->L
+"NUMERO DE LADOS"?\->N
+"APOTEMA"?\->T
+NLT/2\->A
+NL\->P
+\ClrText
+"AREA:"
+" "
+"PERIMETRO:"
+" "
+\Locate 6,2,A
+\Locate 6,4,P
+\Stop
+\IfEnd
+\IfEnd
+
+\If \Ans=62
+\Then 1\->X
+\ClrText
+"=======FIGURAS======= 1.ESFERA"
+" 2.CONE"
+" 3.CILINDRO"
+" 4.PIRAMIDE REGULAR"
+" 5.PRISMA REG. RECTO"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52)\ Or (\Ans=73)\ Or (\Ans=63))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"=======ESFERA========[V=(4/3)\Pi\r^3]"
+"[AT=4\Pi\r\x^2]"
+"RAIO"?\->R
+4\PiR\x^2\->Y
+(4/3)\PiR^3\->Z
+\ClrText
+"AREA:"
+" "
+"VOLUME:"
+" "
+\Locate 6,2,Y
+\Locate 6,4,Z
+\Stop
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\ClrText
+"========CONE=========[V=(1/3)A\Rb*H]"
+"RAIO"?\->R
+"ALTURA"?\->H
+2\PiR*\sqrt(H\x^2+R\x^2)/2+\PiR\x^2\->Y
+(\PiR\x^2*H)/3\->Z
+\ClrText
+"AREA:"
+" "
+"VOLUME:"
+" "
+\Locate 6,2,Y
+\Locate 6,4,Z
+\Stop
+\IfEnd
+\If \Ans=52
+\Then 3\->X
+\ClrText
+"======CILINDRO=======[V=A\Rb*H]"
+"RAIO"?\->R
+"ALTURA"?\->H
+2\PiR*H+2\PiR\x^2\->Y
+\PiR\x^2*H\->Z
+\ClrText
+"AREA:"
+" "
+"VOLUME:"
+" "
+\Locate 6,2,Y
+\Locate 6,4,Z
+\Stop
+\IfEnd
+\If \Ans=73
+\Then 4\->X
+\ClrText
+"==PIRAMIDE REGULAR===[V=(1/3)A\Rb*H]"
+"LARGURA DA BASE"?\->L
+"NUMERO DE LADOS"?\->K
+"APOTEMA DA BASE"?\->J
+\Goto3
+\Lbl 1:\Text 56,61,"IS":\Text 56,87,"EIRA":\Text 56,71,"MAD":\Text 56,45,"DIN":\Text 56,29,"POR:":\Goto2
+\Lbl 3
+"ALTURA"?\->H
+\sqrt(H\x^2+J\x^2)*KL/2+JKL/2\->Y
+(HJKL/2)/3\->Z
+\ClrText
+"AREA:"
+" "
+"VOLUME:"
+" "
+\Locate 6,2,Y
+\Locate 6,4,Z
+\Stop
+\IfEnd
+\If \Ans=63
+\Then 5\->X
+\ClrText
+"PRISMA REGULAR RECTO [V=A\Rb*H]"
+"LARGURA DA BASE"?\->L
+"NUMERO DE LADOS"?\->K
+"APOTEMA DA BASE"?\->J
+"ALTURA"?\->H
+HKL+JKL\->Y
+HJKL/2\->Z
+\ClrText
+"AREA:"
+" "
+"VOLUME:"
+" "
+\Locate 6,2,Y
+\Locate 6,4,Z
+\Stop
+\IfEnd
+\IfEnd
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\ClrText
+"=====CONVERSOES====== 1.UNIDADES COMPRIMEN 2.UNIDADES PESO"
+" 3.VELOCIDADE"
+" 4.TEMPERATURA"
+" 5.UNIDADES METRICAS"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52)\ Or (\Ans=73)\ Or (\Ans=63))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"UNIDADES COMPRIMENTO  1.POLEGDAS/CENTMTROS 2.PES/METROS"
+" 3.MILHAS/KILOMETROS"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"POLEGADAS/CENTIMETROS"?\->A
+A*2.540\->C
+A/2.540\->P
+\ClrText
+"CENTIMETROS:"
+" "
+"POLEGADAS:"
+" "
+\Locate 6,2,C
+\Locate 6,4,P
+\Stop
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\ClrText
+"=====PES/METROS======"?\->A
+A*0.3048\->M
+A/0.3048\->P
+\ClrText
+"METROS:"
+" "
+"PES:"
+" "
+\Locate 6,2,M
+\Locate 6,4,P
+\Stop
+\IfEnd
+\If \Ans=52
+\Then 3\->X
+\ClrText
+"==MILHAS/KILOMETROS=="?\->A
+A*1.6903\->K
+A/1.6903\->M
+\ClrText
+"KILOMETROS:"
+" "
+"MILHAS:"
+" "
+\Locate 6,2,K
+\Locate 6,4,M
+\Stop
+\IfEnd
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\ClrText
+"==UNIDADES DE PESO=== 1.ONCAS/GRAMAS"
+" 2.LIBRAS/KILOGRAMAS"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"====ONCAS/GRAMAS====="?\->A
+A*28.3495\->G
+A/28.3495\->O
+\ClrText
+"GRAMAS:"
+" "
+"ONCAS:"
+" "
+\Locate 6,2,G
+\Locate 6,4,O
+\Stop
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\ClrText
+"==LIBRAS/KILOGRAMAS=="
+?\->A
+A*0.4536\->K
+A/0.4536\->L
+\ClrText
+"KILOGRAMAS:"
+" "
+"LIBRAS:"
+" "
+\Locate 6,2,K
+\Locate 6,4,L
+\Stop
+\IfEnd
+\IfEnd
+\If \Ans=52
+\Then 3\->X
+\ClrText
+"=====VELOCIDADE====== 1.MILHAS/H\(-)K\milli/H"
+" 2.NOS\(-)KILOMETROS/H   3.METROS/S\(-)K\milli/H"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"MILHAS/H\(-)KILOMETROS/H"?\->A
+A*1.6093\->K
+A/1.6093\->M
+\ClrText
+"KILOMETROS/HORA:"
+" "
+"MILHAS/HORA:"
+" "
+\Locate 6,2,K
+\Locate 6,4,M
+\Stop
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\ClrText
+"======NOS\(-)KM/H======="?\->A
+A*0.8684\->K
+A/0.8684\->N
+\ClrText
+"KILOMETROS/HORA:"
+" "
+"NOS:"
+" "
+\Locate 6,2,K
+\Locate 6,4,N
+\Stop
+\IfEnd
+\If \Ans=52
+\Then 3\->X
+\ClrText
+"METROS/S\(-)KILOMETROS/H"?\->A
+A*3.6\->K
+A/3.6\->M
+\ClrText
+"KILOMETROS/HORA:"
+" "
+"METROS/SEGUNDO:"
+" "
+\Locate 6,2,K
+\Locate 6,4,M
+\Stop
+\IfEnd
+\IfEnd
+\If \Ans=73
+\Then 4\->X
+\ClrText
+"====TEMPERATURAS===="
+" 1.CELSIUS\->KELV/FAHR"
+" 2.KELVIN\->CELS/FAHR"
+" 3.FAHREN\->CELS/KELV"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52)\ Or (\Ans=73)\ Or (\Ans=63)\ Or (\Ans=53))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"CELSIUS"?\->C
+C+273\->K
+1.8C+32\->F
+\ClrText
+"KELVIN:"
+" "
+\Locate 1,2,K
+" "
+\Locate 1,3,"---------------------"
+"FAHRENHEIT:"
+" "
+\Locate 1,5,F
+\Stop
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\ClrText
+"KELVIN"?\->K
+K-273\->C
+1.8C+32\->F
+\ClrText
+"CELSIUS:"
+" "
+\Locate 1,2,C
+" "
+\Locate 1,3,"---------------------"
+"FAHRENHEIT:"
+" "
+\Locate 1,5,F
+\Stop
+\IfEnd
+\If \Ans=52
+\Then 3\->X
+\ClrText
+"FAHRENHEIT:"?\->F
+(F-32)\ab/c1.8\->C
+C+273\->K
+\ClrText
+"CELSIUS:"
+" "
+\Locate 1,2,C
+" "
+\Locate 1,3,"---------------------"
+"KELVIN:"
+" "
+\Locate 1,5,K
+\Stop
+\IfEnd
+\IfEnd
+\If \Ans=63
+\Then 5\->X
+\ClrText
+"==UNIDADES METRICAS== 1.NANOMETROS(\R n\milli)"
+" 2.MICROMETRO(\micro\milli)"
+" 3.MILIMETROS(\milli\milli)"
+" 4.KILOMETROS(\kilo\milli)"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52)\ Or (\Ans=73)\ Or (\Ans=63)\ Or (\Ans=53))=0
+\If \Ans=72
+\Then 1\->X
+\ClrText
+"==NANOMETROS/METROS=="?\->A
+A/1\EE\(-)9\->B
+A*1\EE\(-)9\->M
+\ClrText
+"METROS:"
+" "
+"NANOMETROS:"
+" "
+\Locate 6,2,M
+\Locate 6,4,B
+\Stop
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\ClrText
+"=MICROMETROS/METROS=="?\->A
+A/1\EE\(-)6\->B
+A*1\EE\(-)6\->M
+\ClrText
+"METROS:"
+" "
+"MICROMETROS:"
+" "
+\Locate 6,2,M
+\Locate 6,4,B
+\Stop
+\IfEnd
+\If \Ans=52
+\Then 3\->X
+\ClrText
+"==MILIMETROS/METROS=="?\->A
+A/1\EE\(-)3\->B
+A*1\EE\(-)3\->M
+\ClrText
+"METROS:"
+" "
+"MILIMETROS:"
+" "
+\Locate 6,2,M
+\Locate 6,4,B
+\Stop
+\IfEnd
+\If \Ans=73
+\Then 4\->X
+\ClrText
+"==KILOMETROS/METROS=="?\->A
+A/1\EE3\->B
+A*1\EE3\->M
+\ClrText
+"METROS:"
+" "
+"KILOMETROS:"
+" "
+\Locate 6,2,M
+\Locate 6,4,B
+\Stop
+\IfEnd
+\IfEnd
+\IfEnd
+
+
+\If \Ans=53
+\Then 6\->X
+0\->A~Z:1\->D:2\->I:3\->N:4\->S:5\->M:6\->A:7\->E:8\->R:20208\->\theta
+\ViewWindow 1,127,0,1,63,0
+\Cls
+\F-Line 1,52,127,52
+\F-Line 1,12,127,12
+\F-Line 35,54,93,54
+\F-Line 94,55,94,61
+\F-Line 93,62,35,62
+\F-Line 34,61,34,55
+\F-Line 27,2,103,2
+\F-Line 104,3,104,9
+\F-Line 103,10,27,10
+\F-Line 26,9,26,3
+\Text 4,37,"FORMULAS 3000"
+POR+DINIS+MADEIRA\<>\theta\=>\Break
+\Text 46,15,"VERSAO:3000.01 01-06-2004"
+\Goto1
+\Lbl 2
+\Do
+\Getkey
+\LpWhile (\Ans\<>0)=0
+\Ans\<>0\=>\Prog "FORM3000"
+\@00
+%End

@@ -1,0 +1,185 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:TRIGONOM
+Option Name:
+Communication SW:0
+Capacity:1578
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+"====TRIGONOMETRIA====       -------"
+"1:F\orm. Fundamentais"
+"2:Tabela"
+"3:\Reducao ao 1\Deg>Q."
+"4:Angulo Generalizado"
+\GotoB:\Lbl C:1\->A~Z:3\->D:6\->S
+(0KEY)+DINIS\<>18\=>\Break
+\Locate 7,7,"24-10-2004 V1.0"
+\Do
+\Getkey
+\LpWhile \Ans=0
+\Ans=72\=>\GotoW
+\Ans=62\=>\GotoX
+\Ans=52\=>\GotoY
+\Ans=73\=>\GotoZ
+\ClrText
+\Stop
+\Lbl W
+\ClrText
+"    \sin \theta"
+"    -----= \tan \theta"
+"    \cos \theta"
+" "\Disp\ClrText
+"   \cos \x^2\theta+\sin \x^2\theta=1"
+" "\Disp\ClrText
+"              1"
+"  1+\tan \x^2\theta =------"
+"           \cos \x^2\theta"
+""
+\Stop
+\Lbl X
+\StoV-Win 1
+\ViewWindow 1,127,0,1,63,0
+\Cls
+\GotoA:\Lbl B:\Locate 1,7,"DI":\Locate 3,7,"NIS":\GotoC:\Lbl A
+\Text 4,13,"\theta"
+\Text 4,28,"30\Deg>"
+\Text 4,42,"45\Deg>"
+\Text 4,56,"60\Deg>"
+\Text 16,2,"\sin \theta"
+\Text 12,32,"1"
+\Text 20,32,"2"
+\Text 12,41,"\sqrt2"
+\Text 20,46,"2"
+\Text 12,55,"\sqrt3"
+\Text 20,60,"2"
+\Text 32,4,"\cos \theta"
+\Text 28,27,"\sqrt3"
+\Text 36,32,"2"
+\Text 28,41,"\sqrt2"
+\Text 36,46,"2"
+\Text 28,60,"1"
+\Text 36,60,"2"
+\Text 48,2,"\tan \theta"
+\Text 44,27,"\sqrt3"
+\Text 52,32,"3"
+\Text 48,46,"1"
+\Text 48,55,"\sqrt3"
+\F-Line 1,6,68,6
+\F-Line 68,6,68,62
+\F-Line 68,62,1,62
+\F-Line 1,62,1,6
+\F-Line 1,22,68,22
+\F-Line 68,38,1,38
+\F-Line 1,54,68,54
+\F-Line 26,6,26,62
+\F-Line 40,6,40,62
+\F-Line 54,6,54,62
+\F-Line 28,46,38,46
+\F-Line 42,46,52,46
+\F-Line 56,46,66,46
+\F-Line 28,30,38,30
+\F-Line 42,30,52,30
+\F-Line 56,30,66,30
+\F-Line 28,14,38,14
+\Do
+\Getkey
+\LpWhile \Ans=0
+\ClrText
+\RclV-Win 1
+\Stop
+\Lbl Y
+\ClrText
+"RAZ(\Ra\Pi)"
+"\Ra"?\->B
+
+(\Int B)\->C
+B-C\->D
+\If D>0.5
+\Then 
+\Isz C
+\(-)(1-D)\->D
+\IfEnd
+\If D<\(-)0.5
+\Then 
+\Dsz C
+(1+D)\->D
+\IfEnd
+
+C/2=\Int (C/2)\=>0\->C
+C/2\<>\Int (C/2)\=>1\->C
+\If D=0
+\Then C\->D
+0\->C
+\IfEnd
+B=D\=>\Goto0
+
+\ClrText
+"RAZ(\Ra\Pi+\Rb\Pi)"
+" "
+" "
+\Locate 2,2,"\Ra="
+\Locate 2,3,"\Rb="
+\Locate 6,2,C
+\Locate 6,3,D\Disp\Lbl 0
+\ClrText
+\If C=0
+\Then 
+D<0\=>\Goto1
+D\>=0\=>\Goto2
+\IfEnd
+\If C=1
+\Then 
+D\<=0\=>\Goto3
+D\>=0\=>\Goto4
+\IfEnd
+\Stop
+\Lbl 1
+\Abs D\->D
+"      \(-)\sin \Ra\Pi"
+"       \cos \Ra\Pi"
+"      \(-)\tan \Ra\Pi"
+\Locate 1,5,"\Ra="
+\Locate 4,5,D
+\Stop
+\Lbl 2
+"       \sin \Ra\Pi"
+"       \cos \Ra\Pi"
+"       \tan \Ra\Pi"
+\Locate 1,5,"\Ra="
+\Locate 4,5,D
+\Stop
+\Lbl 3
+\Abs D\->D
+"       \sin \Ra\Pi"
+"      \(-)\cos \Ra\Pi"
+"      \(-)\tan \Ra\Pi"
+\Locate 1,5,"\Ra="
+\Locate 4,5,D
+\Stop
+\Lbl 4
+"      \(-)\sin \Ra\Pi"
+"      \(-)\cos \Ra\Pi"
+"       \tan \Ra\Pi"
+\Locate 1,5,"\Ra="
+\Locate 4,5,D
+\Stop
+\Lbl Z
+\ClrText
+"ANGULO"?\->A
+A/360\->B
+\Frac B\->C
+C*360\->D
+
+\If A<0
+\Then 
+A/360\->B
+\Int B\->C
+\(-)C+1\->C
+A+360C\->D
+\IfEnd
+D\->D
+\@00
+%End

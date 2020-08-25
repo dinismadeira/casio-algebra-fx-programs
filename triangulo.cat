@@ -1,0 +1,83 @@
+%Header Record
+Format:MCS1
+Type Number:1
+File Name:TRIANGUL
+Option Name:
+Communication SW:0
+Capacity:604
+Data Type:PG
+%Data Record
+Password:
+BaseN:0
+\ClrText
+"ESCOLHA O ANGULO"
+" 1.\Deg"
+" 2.\Rad"
+" 3.\Gra"
+\Do
+\Getkey
+\LpWhile ((\Ans=72)\ Or (\Ans=62)\ Or (\Ans=52))=0
+\If \Ans=72
+\Then 1\->X
+\Deg
+" "
+"-\Deg-\Deg-\Deg-\Deg-\Deg-"
+\IfEnd
+\If \Ans=62
+\Then 2\->X
+\Rad
+" "
+"-\Rad-\Rad-\Rad-\Rad-\Rad-"
+\IfEnd
+\If \Ans=52
+\Then 3\->X
+\Gra
+" "
+"-\Gra-\Gra-\Gra-\Gra-\Gra-"
+\IfEnd
+"AX"?\->A
+"AY"?\->B
+"BX"?\->C
+"BY"?\->D
+"CX"?\->E
+"CY"?\->F
+A-C\->G
+B-D\->H
+C-E\->I
+D-F\->J
+E-A\->K
+F-B\->L
+-GI-HJ\->M
+-IK-JL\->N
+-KG-LH\->O
+\sqrt(G\x^2+H\x^2)\->P
+\sqrt(I\x^2+J\x^2)\->Q
+\sqrt(K\x^2+L\x^2)\->R
+M/PQ\->S
+N/QR\->T
+O/PR\->U
+\acos S\->V
+\acos T\->W
+\acos U\->X
+PQ\sqrt(1-S\x^2)\->Y
+\ClrText
+"<ABC="
+\Locate 7,1,V
+"<ACB="
+\Locate 7,2,W
+"<BAC="
+\Locate 7,3,X
+\If X=1
+\Then "                (\Deg)"
+\IfEnd
+\If X=2
+\Then "                (\Rad)"
+\IfEnd
+\If X=3
+\Then "                (\Gra)"
+\IfEnd
+"AREA="
+\Locate 7,4,Y/2
+"         FIM         "
+"PRIMA [EXE] PARA SAIR"\@00
+%End
